@@ -11,7 +11,7 @@ def setup_people():
     """
     people = {}
     _add_oliver(people)
-    # TODO add another person - Pink Panther
+    _add_pink_panther(people)
     return people
 
 
@@ -19,6 +19,13 @@ def _add_oliver(people):
     """ adds oliver """
     new_p = PERSON(first_name='Oliver', surname='Smart',
                    age=21, pet='Rat', hobbies=[])
+    key = new_p.first_name + '_' + new_p.surname
+    people[key] = new_p
+
+def _add_pink_panther(people):
+    """ adds oliver """
+    new_p = PERSON(first_name='Pink', surname='Panther',
+                   age='Unknown', pet='', hobbies=['Various'])
     key = new_p.first_name + '_' + new_p.surname
     people[key] = new_p
 
